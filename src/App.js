@@ -6,15 +6,26 @@ function App() {
       'black', 'blue', 'red', 'green', 'yellow'
     ];
 
-    const [randomColors, setRandomColors] = useState([getRandomColor(colors), getRandomColor(colors), getRandomColor(colors) ]);
+    let randomColors = randomColorsObj();
     const [gameStatus, setGameStatus] = useState('playing')
 
     function getRandomColor(colors) {
       return colors[Math.floor(Math.random() * colors.length)];
     }
 
+    function randomColorsObj() {
+      const upperWord = getRandomColor(colors);
+      const lowerWord = getRandomColor(colors);
+      const lowerWordInk = Math.random() < 0.4 ? upperWord : getRandomColor(colors);
+      return {
+        upperWord,
+        lowerWord,
+        lowerWordInk
+      }
+    }
+
     function handleClick( yesBtnClicked ) {
-        if ( (( randomColors[0] === randomColors[2] ) ^ yesBtnClicked) === 0 ) {
+        if ( (( randomColors.upperWord === randomColors.lowerWordInk ) ^ yesBtnClicked) === 0 ) {
           setGameStatus('correct')
           
         }
@@ -25,7 +36,7 @@ function App() {
     }
     
     useEffect(() => {
-      console.log("j")
+      
       if (gameStatus !== "playing") {
       resetGame();
       } 
@@ -33,7 +44,7 @@ function App() {
 
     function resetGame() {
       setTimeout( () => {
-        setRandomColors([getRandomColor(colors), getRandomColor(colors), getRandomColor(colors)]);
+        randomColors = randomColorsObj();
         setGameStatus('playing');
       }, 500);
     }
@@ -46,8 +57,8 @@ function App() {
         </div>
         <div className="body">
           <div className={ `game-status status-${gameStatus}` }></div>
-          <div className="meaning">{ randomColors[0].toUpperCase() }</div>
-          <div className="ink" style={{ color: randomColors[2] }}>{ randomColors[1].toUpperCase() }</div>
+          <div className="meaning">{ randomColors.upperWord.toUpperCase() }</div>
+          <div className="ink" style={{ color: randomColors.lowerWordInk }}>{ randomColors.lowerWord.toUpperCase() }</div>
           <div className="buttons">
             <button onClick={() => handleClick(true)}>YES</button>
             <button onClick={() => handleClick(false)}>NO</button>
