@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/Color-Match-Game-with-React/static/css/main.80e32c55.chunk.css",
+    "main.js": "/Color-Match-Game-with-React/static/js/main.ba2ca237.chunk.js",
+    "main.js.map": "/Color-Match-Game-with-React/static/js/main.ba2ca237.chunk.js.map",
+    "runtime-main.js": "/Color-Match-Game-with-React/static/js/runtime-main.a150fb7a.js",
+    "runtime-main.js.map": "/Color-Match-Game-with-React/static/js/runtime-main.a150fb7a.js.map",
+    "static/js/2.92a8770e.chunk.js": "/Color-Match-Game-with-React/static/js/2.92a8770e.chunk.js",
+    "static/js/2.92a8770e.chunk.js.map": "/Color-Match-Game-with-React/static/js/2.92a8770e.chunk.js.map",
+    "index.html": "/Color-Match-Game-with-React/index.html",
+    "precache-manifest.1a71681b577bbf87ca77fdc7d1d87b89.js": "/Color-Match-Game-with-React/precache-manifest.1a71681b577bbf87ca77fdc7d1d87b89.js",
+    "service-worker.js": "/Color-Match-Game-with-React/service-worker.js",
+    "static/css/main.80e32c55.chunk.css.map": "/Color-Match-Game-with-React/static/css/main.80e32c55.chunk.css.map",
+    "static/js/2.92a8770e.chunk.js.LICENSE.txt": "/Color-Match-Game-with-React/static/js/2.92a8770e.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.a150fb7a.js",
+    "static/js/2.92a8770e.chunk.js",
+    "static/css/main.80e32c55.chunk.css",
+    "static/js/main.ba2ca237.chunk.js"
+  ]
+}
